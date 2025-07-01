@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Blog page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>welcome to the blog page!</h1>
+        <h2>TAKE A LOOK AT SOME OF THE TOP POSTS!</h2>
+
+        <a href="{% url 'create_post' %}" class="button">Create New Post</a>
+        
+        {% for post in posts%}
+        <div>
+            <h3>{{post.heading}}</h3>
+            <p>{{post.content}}</p>
+            <h7>by: {{post.name}}  time: {{post.created_at}}</h7>
+        </div>
+        {% endfor %}        
+
+    </body>
+</html>

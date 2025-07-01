@@ -1,0 +1,14 @@
+<h1>Create Post:</h1>
+<form action="create_post" method="POST">
+
+    {% csrf_token %}
+
+    <p>name:</p>
+    <input type="text" name="name" />
+    <p>heading:</p>
+    <input type="text" name="heading" />
+    <p>content:</p>
+    <input type="text" name="content" />
+    <input type="submit" />
+
+</form>
